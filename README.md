@@ -2,7 +2,7 @@
 
 Notes and findings about Dgraph db.
 
-Read more about [facets](https://github.com/youshy/dgraph-playground/facets/README.md) (edge attributes)
+Read more about [facets](https://github.com/youshy/dgraph-playground/blob/master/facets/README.md) (edge attributes)
 
 ## Filtering
 
