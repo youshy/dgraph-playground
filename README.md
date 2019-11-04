@@ -2,7 +2,7 @@
 
 Notes and findings about Dgraph db.
 
-## Functions and filtering
+## Filtering
 
 This are the basic ones and the mostly used (provided in [tour.dgraph.io](https://tour.dgraph.io/basic/6/)
 
@@ -21,6 +21,22 @@ This are the basic ones and the mostly used (provided in [tour.dgraph.io](https:
 * Any logical connectives - `AND`, `OR`, `NOT` are used to bind two (or more) filter types
 
 * `count(edge_type)` - returns the count of all edges
+
+* `has(edge_name)` - returns nodes that have an outgoing edge of the given name
+
+* By using `:` we can set the alias for the return node. Eq: 
+
+```
+{
+  michael_number_friends(func: allofterms(name, "Michael")) {
+    persons_name : name
+    age
+    number_of_friends : count(friend)
+  }
+}
+```
+
+* `@cascade` - removes any nodes that don't have all matching edges in the query
 
 ## Sorting
 
@@ -51,3 +67,7 @@ Every query has to have a starting (root) node from which it'll expand the searc
 ```
 
 Breaking down - `func` accepts only a single function and doesn't accept any connectives or filters. If the root nodes have to be filtered, they need to use `@filter`.
+
+## Other
+
+* Anything after `#` on a line is a comment and ignored for query processing
