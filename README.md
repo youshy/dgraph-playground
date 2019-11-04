@@ -2,6 +2,8 @@
 
 Notes and findings about Dgraph db.
 
+Read more about [facets](https://github.com/youshy/dgraph-playground/facets/README.md) (edge attributes)
+
 ## Filtering
 
 This are the basic ones and the mostly used (provided in [tour.dgraph.io](https://tour.dgraph.io/basic/6/)
